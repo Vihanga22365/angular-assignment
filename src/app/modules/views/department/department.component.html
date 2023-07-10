@@ -1,0 +1,15 @@
+<div class="container" style="margin-top: 2%">
+  <div class="col-sm-12" style="text-align: right">
+    <button mat-raised-button color="primary" *ngIf="isDepartmentTableShow" (click)="changeView()">
+      Add Department
+    </button>
+  </div>
+  <div class="col-sm-12" style="text-align: right">
+    <button mat-raised-button color="primary" *ngIf="!isDepartmentTableShow" (click)="changeView()">
+      Department List
+    </button>
+  </div>
+</div>
+
+<app-department-form *ngIf="!isDepartmentTableShow"></app-department-form>
+<app-department-table *ngIf="isDepartmentTableShow"></app-department-table>

@@ -1,0 +1,13 @@
+table {
+  width: 100%;
+}
+
+.table-with-border {
+  border-collapse: collapse;
+}
+
+.table-with-border th,
+.table-with-border td {
+  border: 1px solid rgb(205, 205, 205);
+  padding: 8px;
+}

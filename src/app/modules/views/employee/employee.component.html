@@ -1,0 +1,10 @@
+<div class="container" style="margin-top: 2%">
+  <div class="col-sm-12" style="text-align: right">
+    <button mat-raised-button color="primary" *ngIf="employeeListChange" (click)="changeView()">Add Employee</button>
+  </div>
+  <div class="col-sm-12" style="text-align: right">
+    <button mat-raised-button color="primary" *ngIf="!employeeListChange" (click)="changeView()">Employee List</button>
+  </div>
+</div>
+<app-employee-form *ngIf="!employeeListChange" [employeeListChange]="employeeListChange"></app-employee-form>
+<app-employee-table *ngIf="employeeListChange" [employeeListChange]="employeeListChange"></app-employee-table>
