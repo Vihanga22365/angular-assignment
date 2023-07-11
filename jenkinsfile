@@ -12,15 +12,15 @@ pipeline {
         stage('Build') {
             steps {
                 // Install dependencies and build Angular app
-                sh 'npm install'
-                sh 'npm run build -- --output-path=./dist'
+                bat 'npm install'
+                bat 'npm run build -- --output-path=./dist'
             }
         }
 
         stage('Deploy') {
             steps {
                 // Copy built files to the Nginx server
-                sh 'cp -R ./dist/* "C:/Program Files/nginx-1.24.0/html/"'
+                bat 'cp -R ./dist/* "C:/Program Files/nginx-1.24.0/html/"'
             }
         }
     }
