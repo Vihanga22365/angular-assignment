@@ -23,4 +23,9 @@ export class EmployeeService {
   downloadExcel() {
     return this.http.get(environment.reportBaseUrl + '/export', { responseType: 'blob' });
   }
+
+  uploadExcel(formData: FormData) {
+    // console.log(formData);
+    return this.http.post<EmployeeApiResponse>(environment.employeeBaseUrl + '/excelUpload', formData);
+  }
 }

@@ -16,6 +16,7 @@ import { DepartmentTableComponent } from './modules/views/department/department-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeExcelComponent } from './modules/views/employee/employee-excel/employee-excel.component';
+import { DepartmentSalaryChartComponent } from './modules/views/department-salary-chart/department-salary-chart.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { EmployeeExcelComponent } from './modules/views/employee/employee-excel/
     DepartmentFormComponent,
     DepartmentTableComponent,
     EmployeeExcelComponent,
+    DepartmentSalaryChartComponent,
   ],
   imports: [
     BrowserModule,

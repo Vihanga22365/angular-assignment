@@ -1,1 +1,10 @@
-<!-- <p>employee-excel works!</p> -->
+<div class="container" style="margin-top: 3%">
+  <div class="col-sm-12" align="center">
+    <mat-card>
+      <mat-card-content>
+        <input type="file" (change)="onFileSelected($event)" accept=".csv, .xlsx" />
+        <button mat-raised-button color="warn" (click)="uploadFile()">Upload Employee List</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
