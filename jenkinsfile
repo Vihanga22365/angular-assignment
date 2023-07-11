@@ -20,7 +20,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Copy built files to the Nginx server
-                bat 'cp -R ./dist/* "C:/Program Files/nginx-1.24.0/html/"'
+                bat 'xcopy /s /y "dist" "C:\\Program Files\\nginx-1.24.0\\html\\"'
             }
         }
     }
