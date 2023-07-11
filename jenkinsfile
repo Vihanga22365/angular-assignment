@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout your repository
+                git branch: 'master', url: 'https://github.com/Vihanga22365/angular-assignment.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Install dependencies and build Angular app
+                sh 'npm install'
+                sh 'npm run build -- --output-path=./dist'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Copy built files to the Nginx server
+                sh 'cp -R ./dist/* "C:/Program Files/nginx-1.24.0/html/"'
+            }
+        }
+    }
+}
