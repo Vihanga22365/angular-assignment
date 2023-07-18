@@ -18,15 +18,18 @@ export class DepartmentSalaryChartComponent implements OnInit {
 
   ngOnInit(): void {
     this.getDepartmentList();
-    setTimeout(() => {
-      this.createrChart();
-    }, 2000);
+    // setTimeout(() => {
+    //   this.createrChart();
+    // }, 2000);
   }
 
   getDepartmentList() {
     this.getDepartmentListSubscription$ = this._departmentService.getDepartmentList().subscribe({
       next: (response: any) => {
         this.departmentList = response.data;
+        if (response.code == 200) {
+          this.createrChart();
+        }
       },
       error: (error) => {
         console.log(error);
